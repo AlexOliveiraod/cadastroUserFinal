@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,100&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+
+    <title>Cadastro de Usuário</title>
+  </head>
+
+  <body class="gradient">
+    <header>
+      <img id="logo" src="/source/sunset.gif" alt="" />
+    </header>
+    <main class="container">
+      <h3>CADASTRO</h3>
+
+      <form id="form" class="modal-form">
+        <div class="form-group row">
+          <label class="col-sm-3">Nome</label>
+          <div class="col-sm-7">
+            <input
+              id="name"
+              data-index="new"
+              type="text"
+              class="form-control"
+              placeholder="Digite Seu nome"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-3">E-mail</label>
+          <div class="col-sm-7">
+            <input
+              id="email"
+              type="email"
+              class="form-control"
+              placeholder="Insira seu E-mail"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-3">Data de Nascimento</label>
+          <div class="col-sm-2">
+            <input
+              id="DataDeNascimento"
+              type="date"
+              class="form-control"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-3">CEP</label>
+          <div class="col-sm-2">
+            <input
+              type="text"
+              class="form-control"
+              id="cep"
+              placeholder="Digite Seu CEP"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="uf" class="col-sm-3">Estado</label>
+          <div class="col-sm-7">
+            <input
+              id="uf"
+              type="text"
+              class="form-control"
+              placeholder="Seu Estado"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="localidade" class="col-sm-3">Cidade</label>
+          <div class="col-sm-7">
+            <input
+              id="localidade"
+              type="text"
+              class="form-control"
+              placeholder="Sua Cidade"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="Bairro" class="col-sm-3">Bairro</label>
+          <div class="col-sm-2">
+            <input
+              id="bairro"
+              type="text"
+              class="form-control"
+              placeholder="Seu Bairro"
+              required
+            />
+          </div>
+          <label for="logradouro" class="col-sm-1">Rua</label>
+          <div class="col-sm-4">
+            <input
+              id="logradouro"
+              type="text"
+              class="form-control"
+              placeholder="Sua Rua"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label for="gender" class="col-sm-3">Sexo</label>
+
+          <div class="col-sm-7">
+            <input type="radio" id="male" name="gender" value="male" required />
+            <label>Masculino</label>
+
+            <input type="radio" name="gender" value="Feminino" required />
+            <label>Feminino</label>
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-sm-3">Ativo</label>
+          <div class="col-sm-7">
+            <input type="checkbox" id="checkbox" value="ativo" />
+          </div>
+        </div>
+
+        <button id="submit" class="col-sm-02">Enviar</button>
+      </form>
+      <br />
+      <div class="form-group row">
+        <table id="tableUser" class="col-sm-10">
+          <thead>
+            <tr>
+              <th>Nome</th>
+              <th>E-mail</th>
+              <th>CEP</th>
+              <th>Estado</th>
+              <th>Cidade</th>
+              <th>Bairro</th>
+              <th>Sexo</th>
+              <th>Ativo</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+  <!-- <footer></footer> -->
+</html>
